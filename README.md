@@ -1,6 +1,6 @@
 # Querying formula-mapped properties in a joined-subclass
 
-This is a reproduction case for an NHibernate bug in which incorrect SQL is produced when using a Linq query which makes use of a property which is mapped using a `formula`, when that property is a member of a `joined-subclass`.
+This is a reproduction case [for an NHibernate bug](https://github.com/nhibernate/nhibernate-core/issues/3614) in which incorrect SQL is produced when using a Linq query which makes use of a property which is mapped using a `formula`, when that property is a member of a `joined-subclass`.
 As far as I can tell there appear to be two symptoms of this issue:
 
 * The formula is modified from the one in the mapping with the addition of a table alias, but an incorrect table alias is added
